@@ -1,0 +1,57 @@
+#A unique identifier for this SAML 2.0 Service Provider application
+SAML2.IdPEntityId=devidp.sanhait.co.kr
+
+#The URL of the SAML 2.0 Identity Provider
+SAML2.IdPURL=https://devidp.sanhait.co.kr/identity/samlsso
+
+SAML2.LoginURL=https://devidp.sanhait.co.kr/identity/login.do
+
+#Identifier given for the Service Provider for SAML 2.0 attributes 
+#exchange
+#SAML2.AttributeConsumingServiceIndex=1701087467
+
+#Specify if SingleLogout is enabled/disabled
+SAML2.EnableSLO=true
+
+#This is the URL that is used for SLO
+SAML2.SLOURL=logout
+
+#Specify if AuthnRequest element is signed
+SAML2.EnableRequestSigning=true
+
+#Specify if SAMLResponse element is signed
+SAML2.EnableResponseSigning=true
+
+#Specify if SAMLAssertion element is signed
+SAML2.EnableAssertionSigning=true
+
+#Specify if SAMLAssertion element is encrypted
+SAML2.EnableAssertionEncryption=true
+
+#KeyStore=WEB-INF/classes/wso2carbon.jks
+KeyStore=WEB-INF/classes/identity.jks
+
+#Password of the KeyStore for SAML and OpenID
+KeyStorePassword=sanhait
+
+#Alias of the IdP's public certificate
+IdPPublicCertAlias=identity
+
+#Alias of the SP's private key 
+PrivateKeyAlias=identity
+
+#Private key password to retrieve the private key used to sign 
+#AuthnRequest and LogoutRequest messages
+PrivateKeyPassword=sanhait
+
+#Custom SAML post binding request page
+#SAML.PostBinding.RequestPage=path/to/the/html
+
+#Additional request parameters
+#QueryParams=tenantDomain=-1234
+
+#SAML2.IsForceAuthn=true
+
+SpCertAlias=sample
+
+ssl.enable=true

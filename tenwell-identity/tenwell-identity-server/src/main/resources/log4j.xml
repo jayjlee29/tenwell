@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration PUBLIC "-//APACHE//DTD LOG4J 1.2//EN" "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<!-- Appenders -->
+	<appender name="console" class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.out" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<!-- param name="ConversionPattern" value="%-5p: %c - %m%n" /-->
+			<param name="ConversionPattern" value="[%d{yyyy-MM-dd HH:mm:ss}] %-5p: %c(%L) %m %n"/>
+		</layout>
+	</appender>
+	
+	
+	<!--  날짜별 로그 -->  
+    <appender name="systemout" class="org.apache.log4j.DailyRollingFileAppender">  
+        <!-- 이것은 날짜별로  로그를 남김. 파일명.확장자.DatePattern으로 정의 함-->  
+        <param name="file" value="${catalina.home}/logs/systemout.log"/>
+        <param name="Append" value="true"/>  
+        <param name="DatePattern" value="'.'yyMMdd"/>
+        <layout class="org.apache.log4j.PatternLayout">  
+            <param name="ConversionPattern" value="[%d{yyyy-MM-dd HH:mm:ss}] %-5p: %c(%L) %m %n"/>  
+        </layout>  
+    </appender>
+	
+	<!-- Application Loggers -->
+	<logger name="com.wings.identity">
+		<level value="debug" />
+	</logger>
+	
+	<logger name="com.wings.frameworks">
+		<level value="debug" />
+	</logger>
+	
+	<!-- 3rdparty Loggers -->
+	<logger name="org.opensaml">
+		<level value="info"/>
+	</logger>
+	<logger name="org.springframework.core">
+		<level value="info" />
+	</logger>
+	
+	<logger name="org.springframework.beans">
+		<level value="info" />
+	</logger>
+	
+	<logger name="org.springframework.context">
+		<level value="info" />
+	</logger>
+
+	<logger name="org.springframework.web">
+		<level value="info" />
+	</logger>
+	
+	<logger name="java.sql">
+	    <level value="debug" />
+	</logger>
+	<logger name="java.sql.ResultSet">
+	    <level value="TRACE" />
+	</logger>
+	
+	<logger name="org.mybatis">
+	    <level value="debug" />
+	</logger>
+
+	<!-- Root Logger -->
+	<root>
+		<priority value="error" />
+		<appender-ref ref="console" />
+		<appender-ref ref="systemout" />
+	</root>
+	
+</log4j:configuration>
