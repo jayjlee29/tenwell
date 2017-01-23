@@ -53,12 +53,13 @@ public class IdentityController extends AbstractController{
 	public ModelAndView loginPost(HttpServletRequest request, ParamMap param, Model model) throws IdentityException, LoginException {
 		
 		LOGGER.debug("SSO Login POST Processing...");
+		
 		ModelAndView view = new ModelAndView();
 		String issuer = StringUtil.nvl(request.getParameter("issuer"), "sample.tenwell.org");
 		String acsUrl = StringUtil.decodeURL(request.getParameter("acsUrl"), "UTF-8");
 		String username = StringUtil.nvl(request.getParameter("username"), "");
 		String password = StringUtil.nvl(request.getParameter("password"), "");
-		String sessionTokenId = "";
+		//String sessionTokenId = "";
 		
 		if("".equals(username) || "".equals(password)){
 			throw new IdentityException("The Service did not receive the necessary information to log in(username, password)");
