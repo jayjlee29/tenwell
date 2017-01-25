@@ -1,6 +1,5 @@
 # tenwell
 Simple SAML2 SSO
-
-java
-tomcat
-any dbms
+*java
+*tomcat
+*any dbms
