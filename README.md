@@ -22,8 +22,8 @@ IDP 구성을 위한 Core library
 IDP 예제 WAS Application
 
 
-# 중요설정
 
+# 환경설정
 * IDP
   * tenwell-identity-server ssl 설정
   * idp.properties 설정
@@ -31,3 +31,10 @@ IDP 예제 WAS Application
 
 * SP  
   * saml.properties 설정
+
+
+# hosts 설정
+<pre>
+127.0.0.1 sample.tenwell.org
+127.0.0.1 idp.tenwell.org
+</pre>
