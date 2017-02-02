@@ -25,20 +25,20 @@ IDP 예제 WAS Application
 # 환경설정
 * IDP
   * tenwell-identity-server ssl 설정  
-  <pre>
-  <Connector 
-    SSLEnabled="true" 
-    URIEncoding="UTF-8" 
-    clientAuth="false" 
-    keystoreFile="D:/work/workspace/wings-identity/wings-identity-server/src/main/resources/identity.jks" 
-    keystorePass="sanhait" 
-    maxHttpHeaderSize="65536" 
-    maxThreads="150" port="8443" 
-    protocol="org.apache.coyote.http11.Http11Protocol" 
-    scheme="https" 
-    secure="true" 
-    sslProtocol="TLS"/>
-  </pre>  
+  <code>
+    <Connector 
+      SSLEnabled="true" 
+      URIEncoding="UTF-8" 
+      clientAuth="false" 
+      keystoreFile="D:/work/workspace/wings-identity/wings-identity-server/src/main/resources/identity.jks" 
+      keystorePass="sanhait" 
+      maxHttpHeaderSize="65536" 
+      maxThreads="150" port="8443" 
+      protocol="org.apache.coyote.http11.Http11Protocol" 
+      scheme="https" 
+      secure="true" 
+      sslProtocol="TLS"/>
+  </code>  
   * idp.properties 설정
 
 
@@ -47,7 +47,7 @@ IDP 예제 WAS Application
 
 
 # hosts 설정
-<pre>
+<code>
 127.0.0.1 sample.tenwell.org
 127.0.0.1 idp.tenwell.org
-</pre>
+</code>
