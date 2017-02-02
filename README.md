@@ -1,31 +1,29 @@
-# tenwell
-h1. Simple SAML2 SSO
+tenwell
+=======
+Simple SSO
 saml2을 이용한 web 기반의 SSO 프로젝트 입니다.
 
-
-h2. 프로젝트 설명  
-
-# tenwell-identity-agent  
+프로젝트 설명
+============
+# tenwell-identity-agent
 SP에서 사용될 Agent Filter
 
+# tenwell-identity-agent-sample
+SP 예제 WAS Application
 
-* tenwell-identity-agent-sample     
-SP 예제 WAS Application  
+# tenwell-identity-core   
+IDP 구성을 위한 Core library
 
-
-* tenwell-identity-core   
-IDP 구성을 위한 Core library  
-
-
-* tenwell-identity-server  
+# tenwell-identity-server
 IDP 예제 WAS Application
 
-
-
-# 환경설정
-* IDP
-  * tenwell-identity-server ssl 설정  
-  <code>
+환경설정
+=======
+# IDP
+* tenwell-identity-server ssl 설정 
+* server.xml 설정
+  
+```
     <Connector 
       SSLEnabled="true" 
       URIEncoding="UTF-8" 
@@ -38,7 +36,8 @@ IDP 예제 WAS Application
       scheme="https" 
       secure="true" 
       sslProtocol="TLS"/>
-  </code>  
+ ```
+ 
   * idp.properties 설정
 
 
@@ -47,7 +46,7 @@ IDP 예제 WAS Application
 
 
 # hosts 설정
-<code>
+```
 127.0.0.1 sample.tenwell.org
 127.0.0.1 idp.tenwell.org
-</code>
+```
