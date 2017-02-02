@@ -1,6 +1,7 @@
 # tenwell
 Simple SSO
-saml2을 이용한 web 기반의 SSO 프로젝트 입니다.
+- saml2을 이용한 web 기반의 SSO 프로젝트 입니다.
+- WSO2, saml2
 
 # 프로젝트 설명
 - tenwell-identity-agent
