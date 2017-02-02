@@ -21,8 +21,8 @@ Simple SSO
       SSLEnabled="true" 
       URIEncoding="UTF-8" 
       clientAuth="false" 
-      keystoreFile="D:/work/workspace/wings-identity/wings-identity-server/src/main/resources/identity.jks" 
-      keystorePass="sanhait" 
+      keystoreFile="jks 경로" 
+      keystorePass="jks " 
       maxHttpHeaderSize="65536" 
       maxThreads="150" port="8443" 
       protocol="org.apache.coyote.http11.Http11Protocol" 
@@ -34,12 +34,12 @@ Simple SSO
 - idp.properties 중요설정
 ```
 #A unique identifier for this SAML 2.0 Service Provider application
-SAML2.IdPEntityId=localidp.sanhait.co.kr
+SAML2.IdPEntityId=idp.tenwell.org
 
 #The URL of the SAML 2.0 Identity Provider
-SAML2.IdPURL=https://localidp.sanhait.co.kr:8443/identity/samlsso
+SAML2.IdPURL=https://idp.tenwell.org:8443/identity/samlsso
 
-SAML2.LoginURL=https://localidp.sanhait.co.kr:8443/identity/login.do
+SAML2.LoginURL=https://idp.tenwell.org:8443/identity/login
 
 #Identifier given for the Service Provider for SAML 2.0 attributes 
 #exchange
@@ -96,18 +96,16 @@ ssl.enable=true
 - saml.properties 중요설정
 ```
 #A unique identifier for this SAML 2.0 Service Provider application
-SAML2.SPEntityId=localwings.sanhait.co.kr/pms
+SAML2.SPEntityId=sample.tenwell.org
 
 #The URL of the SAML 2.0 Assertion Consumer
-SAML2.AssertionConsumerURL=http://localwings.sanhait.co.kr:9003/pms/samlsso.do
+SAML2.AssertionConsumerURL=http://sample.tenwell.org:8080/sample/samlsso
 
 #A unique identifier for this SAML 2.0 Service Provider application
-#SAML2.IdPEntityId=localidp.sanhait.co.kr
-SAML2.IdPEntityId=devidp.sanhait.co.kr
+SAML2.IdPEntityId=idp.tenwell.org
 
 #The URL of the SAML 2.0 Identity Provider
-#SAML2.IdPURL=https://localidp.sanhait.co.kr:8443/identity/samlsso
-SAML2.IdPURL=https://devidp.sanhait.co.kr/identity/samlsso
+SAML2.IdPURL=https://idp.tenwell.org/identity/samlsso
 ```
 
 
