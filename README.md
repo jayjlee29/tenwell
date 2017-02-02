@@ -1,25 +1,22 @@
-# tenwell #
-=======
+# tenwell
 Simple SSO
 saml2을 이용한 web 기반의 SSO 프로젝트 입니다.
 
-# 프로젝트 설명 #
-============
-## tenwell-identity-agent ##
+# 프로젝트 설명
+## tenwell-identity-agent
 SP에서 사용될 Agent Filter
 
-## tenwell-identity-agent-sample ##
+## tenwell-identity-agent-sample
 SP 예제 WAS Application
 
-## tenwell-identity-core ##
+## tenwell-identity-core
 IDP 구성을 위한 Core library
 
-## tenwell-identity-server ##
+## tenwell-identity-server
 IDP 예제 WAS Application
 
-# Quick Start #
-==============
-## IDP ##
+# Quick Start
+## IDP
 - Tomcat server.xml 설정 
 ```
     <Connector 
@@ -97,7 +94,7 @@ SpCertAlias=sample
 ssl.enable=true
 ```
 
-## SP ##
+##SP
 - saml.properties 중요설정
 ```
 #A unique identifier for this SAML 2.0 Service Provider application
@@ -116,7 +113,7 @@ SAML2.IdPURL=https://devidp.sanhait.co.kr/identity/samlsso
 ```
 
 
-## hosts 설정 ##
+##hosts 설정
 ```
 127.0.0.1 sample.tenwell.org
 127.0.0.1 idp.tenwell.org
