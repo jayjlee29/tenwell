@@ -95,13 +95,11 @@ public class IdentityController extends AbstractController{
 			
 		} catch(Exception e){
 			LOGGER.error("", e);
-			String errorMessage = messageSource.getMessage("IDENTITY.comn.unexpectederror",  null, Locale.KOREAN);
-			
 			view.addObject("result", false);
 			view.addObject("resultMsg", e.getMessage());
 		} 
-		
-		return view;
+		ModelAndView redirectMV = new ModelAndView("redirect:/login");
+		return redirectMV;
 	}
 	
 	
